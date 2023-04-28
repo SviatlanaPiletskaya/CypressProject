@@ -13,4 +13,9 @@ describe("Test suite Common Methods", () => {
         cy.get('#query-btn').should('contain', 'Button')
     })
 
+    it('clicking "click()" navigates to a new url', () => {
+        cy.get('#click').click()
+        cy.url().should('include', 'commands/click')
+    })
+
 })
